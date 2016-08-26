@@ -42,4 +42,4 @@ answer = ResultReader.new(result)
 
 puts "Ваш результат - #{result}\n"
 puts
-puts answer.show_result.to_s
+puts answer.show_result
