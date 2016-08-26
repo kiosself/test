@@ -6,7 +6,6 @@ class ResultReader
   end
 
   def show_result
-
     if @result >= 30
       read_file "30_32"
     elsif @result >= 25
@@ -22,10 +21,9 @@ class ResultReader
     else
       read_file "0_3"
     end
-
   end
 
-  def read_file x
-    File.read(@@current_path + "/results/#{x}.txt" , :encoding => 'UTF-8')
+  def read_file(x)
+    File.read(@@current_path + "/results/#{x}.txt" , :encoding => 'UTF-8').to_s
   end
 end
